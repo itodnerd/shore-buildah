@@ -2,7 +2,7 @@
 
 ctr=$(buildah from docker.io/debian:8)
 buildah config --env GOPATH=/home $ctr
-buildah run $ctr /bin/sh -c 'apt-get update && apt-get upgrade -y && apt-get -y install git autoconf build-essential pkg-config; \
+buildah run $ctr /bin/sh -c 'apt-get update && apt-get upgrade -y && apt-get -y install git autoconf build-essential pkg-config libncurses5-dev libncursesw5-dev; \
     mkdir -p /home/git
     cd /home/git;\
     git clone https://github.com/epfl-dias/shore-mt.git mt; \
