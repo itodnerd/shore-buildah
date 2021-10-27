@@ -8,6 +8,7 @@ buildah run $ctr /bin/sh -c 'cd /home/git;\
     ln -s /home/git/mt/m4;\
     ls;\
     ./autogen.sh &&
-    ./configure --with-shore=/home/git/mt --with-glibtop --enable-debug;'
+    ./configure --with-shore=/home/git/mt --with-glibtop --enable-debug &&
+    make -j;'
 
 buildah commit $ctr shore-kit
