@@ -3,7 +3,7 @@
 ctr=$(buildah from shore-mt)
 buildah config --env GOPATH=/home/git $ctr
 buildah run $ctr /bin/sh -c 'cd /home/git;\
-    git clone https://github.com/epfl-dias/shore-kits.git kits; \
+    git clone https://github.com/itodnerd/shore-kits.git kits; \
     cd kits;\
     ln -s /home/git/mt/m4;\
     ls;\
